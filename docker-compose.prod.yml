@@ -1,6 +1,6 @@
 services:
   server:
-    container_name: space-jam-server
+    container_name: jam-server
     build:
       context: .
       dockerfile: Dockerfile
@@ -15,7 +15,7 @@ services:
       - nginx-network
 
   redis:
-    container_name: space-jam-redis
+    container_name: jam-redis
     image: "redis:latest"
     ports:
       - "6379:6379"
