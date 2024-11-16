@@ -5,7 +5,7 @@ import redis from './config/db';
 dotenv.config();
 
 const app: Express = express();
-const port = parseInt(process.env.PORT as string) || 3000;
+const port = parseInt(process.env.PORT as string) || 7777;
 
 app.get('/', async (req: Request, res: Response) => {
 	// Set a key in Redis
@@ -17,6 +17,6 @@ app.get('/', async (req: Request, res: Response) => {
 	res.send(`Hello, ${name}`);
 });
 
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, () => {
 	console.log(`[server]: Server is running at http://localhost:${port}`);
 });
