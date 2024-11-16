@@ -17,6 +17,6 @@ app.get('/', async (req: Request, res: Response) => {
 	res.send(`Hello, ${name}`);
 });
 
-app.listen(port, () => {
+app.listen(port, '0.0.0.0', () => {
 	console.log(`[server]: Server is running at http://localhost:${port}`);
 });
